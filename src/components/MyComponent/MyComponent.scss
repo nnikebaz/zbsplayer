@@ -1,0 +1,12 @@
+.blob {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1.6rem;
+  padding: 2rem;
+  &__item {
+    padding: 1rem 2rem; 
+    background-color: #73737336;
+    border-radius: 5rem;
+    color: white;
+  }
+}

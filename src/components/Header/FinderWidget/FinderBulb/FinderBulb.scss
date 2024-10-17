@@ -1,0 +1,23 @@
+@import "../../../../sass/abstracts/variables.scss";
+
+.FinderBulb {
+  position: relative;
+  height: 100%;
+  &__input {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: 1.5rem;
+    border-radius: 50rem;
+    padding: 0rem 15rem 0rem 6rem;
+    border: none;
+    background-color: $color-gray;
+    color: $color-white;
+    caret-color: $color-white;
+    font-weight: 400;
+    &::placeholder {
+      color: $color-light-gray;
+    }
+  }
+
+}

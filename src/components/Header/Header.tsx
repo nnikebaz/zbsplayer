@@ -1,12 +1,21 @@
 import React from "react";
-import './Header.scss'
+import "./Header.scss";
+import Navigation from "./Navigation/Navigation";
+import FinderWidget from "./FinderWidget/FinderWidget";
+import Social from "./Socials/Socials";
 
-function Header () {
+// interface HeaderProps {
+//   children: React.ReactNode
+// }
+
+const Header: React.FC = () => {
   return (
-    <div className="header">
-      <header>Header</header>
+    <div className="Header">
+      <Navigation/>
+      <FinderWidget/>
+      <Social/>
     </div>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

@@ -1,0 +1,9 @@
+@import '../../../../sass/abstracts/variables.scss';
+
+.CowbellIcon {
+  .CowbellIcon__item {
+    fill: $color-light-gray;
+    width: 2rem;
+    aspect-ratio: 1 / 1;
+  }
+}

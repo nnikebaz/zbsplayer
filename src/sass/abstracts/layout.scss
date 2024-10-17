@@ -1,0 +1,10 @@
+#root {
+  height: 100%;
+}
+
+.main-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 15fr 5fr;
+  grid-template-rows: 1fr 10fr 1fr;
+  height: 100%;
+}

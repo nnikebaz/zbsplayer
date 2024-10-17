@@ -1,0 +1,12 @@
+@import '../../../../../sass/abstracts/variables.scss';
+
+.ReviewIcon {
+  &__item {
+    position: absolute;
+    fill: $color-light-gray;
+    width: 2.5rem;
+    height: 2.5rem;
+    top: 1.35rem;
+    right: 2rem;
+  }
+}

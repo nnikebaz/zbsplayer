@@ -1,0 +1,35 @@
+@import '../../../../sass/abstracts/variables.scss';
+
+.ProfileButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1 / 1;
+  height: 100%;
+  background-color: $color-gray;
+  border-radius: 100%;
+  transition: transform .1s ease;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.1);
+  }
+  &__item {
+    fill: $color-white;
+    width: 2.3rem;
+  }
+  &__round {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $color-profile;
+    height: 70%;
+    aspect-ratio: 1 / 1;
+    border-radius: 100%;
+  }
+  &__monogram {
+    font-size: 1.6rem;
+    color: $color-black;
+    font-weight: 500;
+  }
+
+}

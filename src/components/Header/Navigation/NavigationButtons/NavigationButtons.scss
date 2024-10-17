@@ -1,0 +1,10 @@
+@import '../../../../sass/abstracts/variables.scss';
+
+.NavigationButtons {
+  display: flex;
+  gap: 2rem;
+  &__leftButton, &__rightButton {
+    fill: $color-gray;
+    width: 1.5rem;
+  }
+}

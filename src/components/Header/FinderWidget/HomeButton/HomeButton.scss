@@ -1,0 +1,20 @@
+@import '../../../../sass/abstracts/variables.scss';
+
+.HomeButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1 / 1;
+  height: 100%;
+  background-color: $color-gray;
+  border-radius: 100%;
+  transition: transform .1s ease;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.1);
+  }
+  .HomeButton__item {
+    fill: $color-white;
+    width: 2.3rem;
+  }
+}

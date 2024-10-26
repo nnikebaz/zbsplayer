@@ -1,0 +1,22 @@
+@import '../../../../sass/abstracts/variables.scss';
+
+.FavButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 95%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  border-radius: 1rem;
+  transition: background-color .1s ease;
+  cursor: pointer;
+  &:hover {
+    background-color: $color-light-gray20Op;
+  }
+  &__item {
+    width: 80%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    border-radius: .5rem;
+  }
+}

@@ -1,0 +1,27 @@
+@import "../../../../../sass/abstracts/variables.scss";
+
+.SliderButtons {
+  display: none;
+  z-index: 4;
+  position: absolute;
+  bottom: 50%;
+  width: 4rem;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background-color: $color-light-gray20Op;
+  padding: 0rem 0rem;
+  cursor: pointer;
+  &__visible {
+    display: block;
+  }
+}
+
+#SliderButtons__left {
+  left: 4rem;
+  margin-left: 2rem;
+}
+#SliderButtons__right {
+  right: 0;
+  margin-right: 2rem;
+}

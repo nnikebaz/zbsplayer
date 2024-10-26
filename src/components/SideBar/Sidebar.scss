@@ -1,3 +1,16 @@
+@import '../../sass/abstracts/variables.scss';
+
 .sidebar {
-  background: lightsalmon;
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    background: $color-gray;
+    border-radius: 1rem;
+    width: 5vw;
+    height: 100%;
+  }
 }

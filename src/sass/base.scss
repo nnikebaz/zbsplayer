@@ -1,4 +1,5 @@
 @import 'normalize.css';
+@import './abstracts/variables.scss';
 
 html {
   font-size: 62.5%;
@@ -12,7 +13,14 @@ p {
 body {
   background: $color-black;
   height: 100vh;
-  color: $color-white;
-  font-size: 1.6rem;
 }
 
+/* Стилизация скроллбара */
+::-webkit-scrollbar {
+  width: 1.2rem;
+  height: 0;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* Цвет трека */
+}

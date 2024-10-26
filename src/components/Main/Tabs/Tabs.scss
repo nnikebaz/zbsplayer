@@ -1,12 +1,17 @@
+@import '../../../sass/abstracts/variables.scss';
+
 .Tabs {
   display: flex;
-  gap: 1.5rem;
-  font-size: 1.6rem;
-  padding: 2rem;
+  gap: 1rem;
   &__item {
-    padding: 1rem 2rem; 
-    background-color: #73737336;
+    padding: .8rem 1.2rem; 
+    background-color: $color-light-gray20Op;
     border-radius: 5rem;
     color: white;
+    cursor: pointer;
+    transition: background-color .2s ease;
+    &:hover {
+      background-color: $color-light-gray-hover;
+    }
   }
 }

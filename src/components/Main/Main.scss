@@ -1,4 +1,20 @@
+@import '../../sass/abstracts/variables.scss';
+
 .Main {
-  background: lightyellow;
-  color: black;
+  grid-column: 2 / 3;
+  &__wrapper {
+    overflow: hidden;
+    height: 100%;
+    background: $color-gray;
+    border-radius: 1rem;
+  }
+
+  &__flexContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 4rem 0rem 4rem;
+  }
+
 }
+ 

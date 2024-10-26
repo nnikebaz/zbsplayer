@@ -1,0 +1,10 @@
+@import '../../../sass/abstracts/variables.scss';
+
+.MusicLibraryButton {
+  padding: 2rem 0rem 0rem 0rem;
+  .MusicLibraryButton__item {
+    width: 2.5rem;
+    aspect-ratio: 1 / 1;
+    fill: $color-light-gray;
+  }
+}

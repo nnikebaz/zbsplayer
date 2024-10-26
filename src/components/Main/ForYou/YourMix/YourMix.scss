@@ -1,0 +1,55 @@
+@import "../../../../sass/abstracts/variables.scss";
+
+.YourMix {
+  position: relative;
+  &__slider {
+    display: flex;
+    overflow-x: auto;
+    width: 65vw;
+    padding-left: calc(4rem - 1.2rem);
+    padding-right: calc(4rem - 1.2rem);
+  }
+  &::after {
+    z-index: 2;
+    position: absolute;
+    right: -3rem;
+    content: "";
+    display: block;
+    width: 5vw;
+    height: 100%;
+    background: $color-gray;
+    filter: blur(3rem);
+    opacity: 0.8;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.2rem;
+    color: $color-light-gray;
+    font-weight: 200;
+    border-radius: 0.5rem;
+    padding: 1.2rem;
+    transition: background-color 0.2s ease;
+    &:hover {
+      background-color: $color-light-gray20Op;
+    }
+  }
+
+  &__img {
+    width: 19rem;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    border-radius: 0.5rem;
+  }
+
+  &__name {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+  }
+}

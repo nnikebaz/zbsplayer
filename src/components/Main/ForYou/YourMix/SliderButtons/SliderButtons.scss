@@ -1,7 +1,7 @@
 @import "../../../../../sass/abstracts/variables.scss";
 
 .SliderButtons {
-  display: none;
+  opacity: 0;
   z-index: 4;
   position: absolute;
   bottom: 50%;
@@ -12,8 +12,9 @@
   background-color: $color-light-gray20Op;
   padding: 0rem 0rem;
   cursor: pointer;
+  transition: opacity .2s ease-in-out;
   &__visible {
-    display: block;
+    opacity: 1;
   }
 }
 

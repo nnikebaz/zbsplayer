@@ -1,11 +1,14 @@
-import React, { RefObject, useRef } from "react";
+import React, { useState } from "react";
 import "./SliderButtons.scss";
 
 interface SliderButtonsProps {
-  scrollRef: React.RefObject<HTMLDivElement>,
+  scrollRef: React.RefObject<HTMLDivElement>
+  visible: boolean,
 }
 
-const SliderButtons: React.FC<SliderButtonsProps> = ({scrollRef}) => {
+const SliderButtons: React.FC<SliderButtonsProps> = ({scrollRef, visible}) => {
+
+
   const scrollLeft = (event: React.MouseEvent<HTMLDivElement>) => {
     event.preventDefault()
     if (scrollRef.current) {
@@ -28,8 +31,8 @@ const SliderButtons: React.FC<SliderButtonsProps> = ({scrollRef}) => {
 
   return (
     <>
-      <div className="SliderButtons" id="SliderButtons__left" onClick={scrollLeft}></div>
-      <div className="SliderButtons" id="SliderButtons__right" onClick={scrollRight}></div>
+      <div className={'SliderButtons' + (visible ? ' SliderButtons__visible' : '')} id="SliderButtons__left" onClick={scrollLeft}></div>
+      <div className={'SliderButtons' + (visible ? ' SliderButtons__visible' : '')} id="SliderButtons__right" onClick={scrollRight}></div>
     </>
   );
 };

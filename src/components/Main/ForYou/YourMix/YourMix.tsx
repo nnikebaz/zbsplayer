@@ -1,36 +1,20 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef, useState } from "react";
 import "./YourMix.scss";
 import { albums } from "../../../../data";
 import SliderButtons from "./SliderButtons/SliderButtons";
 
 const YourMix: React.FC = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
-  const sliderButtonsElements = useRef<NodeListOf<Element> | null>(null);
 
-  useEffect(() => {
-    sliderButtonsElements.current = document.querySelectorAll('.SliderButtons');
-  }, [])
+  const [isVisible, setVisible] = useState(false)
 
-  const handleOnMouseEnterVisibleButtons = ():void => {
-    if (sliderButtonsElements.current) {
-      sliderButtonsElements.current.forEach((button) => button.classList.add('SliderButtons__visible'))
-    } else {
-      console.log(`Элемент ${sliderButtonsElements.current} не найден`)
-    } 
-  }
-
-  const handleOnMouseLeaveInvisibleButtons = ():void => {
-    if (sliderButtonsElements.current) {
-      sliderButtonsElements.current.forEach((button) => button.classList.remove('SliderButtons__visible'))
-    } else {
-      console.log(`Элемент ${sliderButtonsElements.current} не найден`)
-    }
-  }
+  const handleOnMouseEnter = () => setVisible(true);
+  const handleOnMouseLeave = () => setVisible(false)
 
   return (
-    <div className="YourMix">
-      <SliderButtons scrollRef={scrollRef}/>
-      <div className="YourMix__slider" ref={scrollRef} onMouseEnter={handleOnMouseEnterVisibleButtons} onMouseLeave={handleOnMouseLeaveInvisibleButtons}>
+    <div className="YourMix" onMouseEnter={handleOnMouseEnter} onMouseLeave={handleOnMouseLeave}>
+      <SliderButtons scrollRef={scrollRef} visible={isVisible} />
+      <div className="YourMix__slider" ref={scrollRef} >
         {albums.map((album) => (
           <div className="YourMix__item" key={album.id}>
             <img

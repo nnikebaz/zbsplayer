@@ -6,14 +6,14 @@ import SliderButtons from "./SliderButtons/SliderButtons";
 const YourMix: React.FC = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
 
-  const [isVisible, setVisible] = useState(false)
+  const [isHover, setHover] = useState(false)
 
-  const handleOnMouseEnter = () => setVisible(true);
-  const handleOnMouseLeave = () => setVisible(false)
+  const handleOnMouseEnter = () => setHover(true);
+  const handleOnMouseLeave = () => setHover(false)
 
   return (
     <div className="YourMix" onMouseEnter={handleOnMouseEnter} onMouseLeave={handleOnMouseLeave}>
-      <SliderButtons scrollRef={scrollRef} visible={isVisible} />
+      <SliderButtons scrollRef={scrollRef} hover={isHover}/>
       <div className="YourMix__slider" ref={scrollRef} >
         {albums.map((album) => (
           <div className="YourMix__item" key={album.id}>

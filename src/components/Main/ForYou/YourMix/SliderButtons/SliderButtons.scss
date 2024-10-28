@@ -12,17 +12,15 @@
   background-color: $color-light-gray20Op;
   padding: 0rem 0rem;
   cursor: pointer;
-  transition: opacity .2s ease-in-out;
+  transition: transform .3s ease-in, opacity .2s ease-in-out;
   &__visible {
     opacity: 1;
   }
 }
 
-#SliderButtons__left {
-  left: 4rem;
-  margin-left: 2rem;
+#sliderButtons__left {
+  left: 0;
 }
-#SliderButtons__right {
+#sliderButtons__right {
   right: 0;
-  margin-right: 2rem;
 }

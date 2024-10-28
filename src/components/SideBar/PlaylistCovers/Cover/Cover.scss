@@ -4,14 +4,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 95%;
+  width: 100%;
+  margin-left: 1.2rem;
   height: auto;
   aspect-ratio: 1 / 1;
   border-radius: 1rem;
   transition: all .1s ease;
   cursor: pointer;
   &:hover {
-    background-color: $color-light-gray20Op;
+    background-color: $color-light-gray-hover;
   }
   &__item {
     width: 80%;

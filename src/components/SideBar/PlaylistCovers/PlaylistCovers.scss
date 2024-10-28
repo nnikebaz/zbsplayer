@@ -4,10 +4,8 @@
   flex-direction: column;
   align-items: center;
   height: 71vh;
-  width: calc(100% - 1.2rem);
   overflow-y: scroll;
   box-sizing: border-box;
-  margin-left: 1.2rem;
   clip-path: border-box;
   padding-bottom: 2rem;
   &__wrapper {

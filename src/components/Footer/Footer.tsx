@@ -4,13 +4,14 @@ import NowPlayingWidget from "./NowPlayingWidget/NowPlayingWidget";
 import PlayerControls from "./PlayerControls/PlayerControls";
 import ControlsPanel from "./ControlsPanel/ControlsPanel";
 
-function Footer() {
-  return <div className="Footer">
-    Footer
-    <NowPlayingWidget/>
-    <PlayerControls/>
-    <ControlsPanel/>
-  </div>;
+const Footer: React.FC = () => {
+  return (
+    <div className="Footer">
+      <NowPlayingWidget/>
+      <PlayerControls/>
+      <ControlsPanel/>
+  </div>
+  )
 }
 
 export default Footer;

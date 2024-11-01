@@ -8,13 +8,14 @@ const Cover: React.FC = () => {
 
     <>
       {albums.map((album) => (
-        <div className="Cover" key={album.id}>
+        // <div className="Cover" key={album.id}>
           <img
             src={album.image.url}
             alt={album.image.alt}
+            key={album.id}
             className="Cover__item"
           />
-        </div>
+        // </div>
       ))}
     </>
   );

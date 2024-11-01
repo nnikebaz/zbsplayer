@@ -1,0 +1,28 @@
+@import '../../../sass/abstracts/variables.scss';
+
+.simplebar-scrollbar {
+  pointer-events: auto;
+}
+
+.simplebar-track.simplebar-vertical {
+  width: 1.2rem;
+}
+
+.simplebar-scrollbar:before {
+  width: 1.2rem;
+  border-radius: 0;
+  background: $color-light-gray;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.simplebar-scrollbar:hover {
+  background: $color-light-gray-hover;
+}
+
+.simplebar-scrollbar:active {
+  background: $color-light-gray-hover;
+}
+

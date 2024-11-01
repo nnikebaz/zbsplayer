@@ -1,21 +1,21 @@
 @import '../../../../sass/abstracts/variables.scss';
 
-.Cover {
+.Cover__item {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin-left: 1.2rem;
   height: auto;
   aspect-ratio: 1 / 1;
-  border-radius: 1rem;
+  border-radius: 1.4rem;
   transition: all .1s ease;
+  padding: .8rem;
   cursor: pointer;
   &:hover {
-    background-color: $color-light-gray-hover;
+    background-color: $color-gray-hover;
   }
   &__item {
-    width: 80%;
+    width: calc(100% - 2rem);
     aspect-ratio: 1 / 1;
     border-radius: .5rem;
     object-fit: cover;

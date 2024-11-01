@@ -9,7 +9,7 @@ function Main() {
   return (
     <div className="Main">
       <div className="Main__wrapper">
-        <Promo />
+        {/* <Promo /> */}
         <div className="Main__flexContainer mb-4">
           <Tabs />
           <Recently />

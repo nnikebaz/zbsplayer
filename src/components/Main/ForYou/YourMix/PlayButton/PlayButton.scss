@@ -1,0 +1,41 @@
+@import '../../../../../sass/abstracts/variables.scss';
+
+.PlayButton {
+  opacity: 0;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  right: 1.2rem;
+  border-radius: 50%;
+  box-shadow: $play-button-shadow;
+  transition: opacity .15s ease-in, transform .2s ease-in;
+  cursor: pointer;
+  &:hover {
+    svg {
+      transform: scale(1.05);
+    }
+    circle {
+      fill: $color-accent-hover;
+    }
+  }
+
+  &__icon {
+    width: 5rem;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    svg {
+      transition: transform .1s ease-in;
+    }
+    circle {
+      fill: $color-accent-primary;
+      transition: fill 0.1s ease-in;
+    }
+  }
+}
+
+.YourMix__item:hover {
+  .PlayButton {
+    opacity: 1;
+    transform: translateY(-1.2rem);
+  }
+}

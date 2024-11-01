@@ -1,5 +1,11 @@
+@import '../../sass/abstracts/variables.scss';
+
 .Footer {
-  display: flex;
-  background:rgb(66, 39, 112);
   grid-column: 1 / -1;
+  grid-row: 3 / 4;
+  display: grid;
+  align-items: center;
+  color: $color-white;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 0 .8rem 2rem .8rem;
 }

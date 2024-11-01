@@ -12,15 +12,20 @@ p {
 
 body {
   background: $color-black;
-  height: 100vh;
+  height: 100%;
 }
 
 /* Стилизация скроллбара */
 ::-webkit-scrollbar {
+  display: none;
   width: 1.2rem;
   height: 0;
 }
 
 ::-webkit-scrollbar-track {
   background: transparent; /* Цвет трека */
+}
+
+::-webkit-scrollbar-track-piece {
+  background: transparent;
 }

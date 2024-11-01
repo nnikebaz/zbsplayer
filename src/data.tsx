@@ -3,15 +3,13 @@ interface Image {
   alt: string;
 }
 
+
 interface Album {
   id: number;
   image: Image;
   name: string;
 }
 
-interface User {
-  firstName: string;
-}
 
 export const albums: Album[] = [
   {
@@ -128,6 +126,37 @@ export const albums: Album[] = [
   },
 ];
 
+
+interface User {
+  firstName: string;
+}
+
 export const user: User = {
   firstName: "liza",
 };
+
+
+interface Track {
+  id: number;
+  url: string | null;
+  img: Image;
+  artistName: string | null;
+  songName: string | null;
+  like: boolean;
+  playing: boolean,
+}
+
+export const trackData: Track[] = [
+  {
+    id: 1,
+    url: "#",
+    artistName: "Mnogoznaal",
+    songName: "Гостиница Космос",
+    img: {
+      url: 'https://images.genius.com/b834342ff0f78e183f9452d8b59d8043.1000x1000x1.png',
+      alt: 'Какое-то описание',
+    },
+    like: true,
+    playing: true
+  },
+];

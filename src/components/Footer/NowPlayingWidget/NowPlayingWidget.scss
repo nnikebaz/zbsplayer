@@ -1,0 +1,30 @@
+@import '../../../sass/abstracts/variables.scss';
+
+.NowPlayingWidget {
+  display: flex;
+  align-items: center;
+  height: 5.5rem;
+  gap: 1.4rem;
+
+  &__text-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+  }
+
+  &__song-name {
+    font-size: calc($widget-font + .1rem)
+  }
+
+  &__artist-name {
+    font-size: $widget-font;
+    color: $color-light-gray;
+  }
+
+  &__img {
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: .5rem;
+    object-fit: cover;
+  }
+}

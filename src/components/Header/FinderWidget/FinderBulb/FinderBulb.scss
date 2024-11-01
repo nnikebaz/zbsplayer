@@ -5,7 +5,7 @@
   height: 100%;
   &:hover {
     .FinderBulb__input {
-      background-color: $color-light-gray-hover;
+      background-color: $color-gray-hover;
     }
     .SearchIcon__item {
       fill: $color-white;
@@ -18,7 +18,7 @@
     height: 100%;
     gap: 1.5rem;
     border-radius: 50rem;
-    padding: 0rem 15rem 0rem 6rem;
+    padding: 0rem 25rem 0rem 6rem;
     border: none;
     background-color: $color-medium-gray;
     color: $color-white;

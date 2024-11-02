@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import "./AudioPlayer.scss";
 import { trackData } from "../../../data";
 import GeneralControls from "./GeneralControls/GeneralControls";

@@ -1,6 +1,5 @@
-import React, { FC } from "react";
+import React from "react";
 import "./ProgressWidget.scss";
-import { trackData } from "../../../../data";
 
 const ProgressWidget: React.FC = () => {
   return <div className="ProgressWidget">

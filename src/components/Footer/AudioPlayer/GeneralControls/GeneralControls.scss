@@ -1,0 +1,34 @@
+@import '../../../../sass/abstracts/variables.scss';
+@import '../../../../sass/abstracts/animations.scss';
+
+.GeneralControls {
+  display: flex;
+  &__prevButton { 
+    width: 3.6rem;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    fill: $color-light-gray;    
+    @include scale-animation-on-button;
+    @include fill-animation-on-button;
+    cursor: pointer;
+  }
+
+  &__playButton {
+    width: 3.6rem;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    fill: white;
+    @include scale-animation-on-button;
+    cursor: pointer;
+  }
+
+  &__nextButton { 
+    width: 3.6rem;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    fill: $color-light-gray;    
+    @include scale-animation-on-button;
+    @include fill-animation-on-button;
+    cursor: pointer;
+  }
+}

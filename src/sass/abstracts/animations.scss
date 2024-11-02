@@ -1,0 +1,17 @@
+@import '../abstracts/variables.scss';
+
+//animation
+
+@mixin scale-animation-on-button($scale: 1.1, $duration: .1s) {
+  transition: transform $duration ease;
+  &:hover {
+    transform: scale($scale);
+  }
+}
+
+@mixin fill-animation-on-button ($fill: $color-light-gray-hover, $duration: .1s) {
+  transition: fill $duration ease;
+  &:hover {
+    fill: $fill;
+  }
+}

@@ -138,7 +138,7 @@ export const user: User = {
 
 interface Track {
   id: number;
-  url: string | null;
+  url: string | undefined;
   img: Image;
   artistName: string | null;
   songName: string | null;
@@ -149,7 +149,7 @@ interface Track {
 export const trackData: Track[] = [
   {
     id: 1,
-    url: "#",
+    url: "server/uploads/Mnogoznaal - Гостиница Космос.mp3",
     artistName: "Mnogoznaal",
     songName: "Гостиница Космос",
     img: {
@@ -157,6 +157,18 @@ export const trackData: Track[] = [
       alt: 'Какое-то описание',
     },
     like: true,
-    playing: true
+    playing: true,
+  },
+  {
+    id: 2,
+    url: "server/uploads/Mnogoznaal - Гостиница Космос.mp3",
+    artistName: "Лизочкина",
+    songName: "Писька",
+    img: {
+      url: 'https://img.freepik.com/free-photo/beautiful-kitten-with-colorful-clouds_23-2150752964.jpg',
+      alt: 'Какое-то описание',
+    },
+    like: true,
+    playing: false,
   },
 ];

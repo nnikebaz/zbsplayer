@@ -150,7 +150,7 @@ interface Track {
 export const trackData: Track[] = [
   {
     id: 1,
-    url: "server/uploads/Mnogoznaal - Гостиница Космос.mp3",
+    url: "temp/Mnogoznaal - Гостиница Космос.mp3",
     artistName: "Mnogoznaal",
     songName: "Гостиница Космос",
     img: {
@@ -162,7 +162,7 @@ export const trackData: Track[] = [
   },
   {
     id: 2,
-    url: "server/uploads/Mnogoznaal - Гостиница Космос.mp3",
+    url: "temp/Mnogoznaal - Гостиница Космос.mp3",
     artistName: "Лизочкина",
     songName: "Песня",
     img: {
@@ -173,6 +173,7 @@ export const trackData: Track[] = [
     playing: false,
   },
 ];
+
 
 
 // async function parsingMetaData (trackURL: RequestInfo | URL): Promise<string> {

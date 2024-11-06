@@ -1,0 +1,28 @@
+{
+  "tracks": [
+    {
+      "id": 1,
+      "url": "temp/Mnogoznaal - Гостиница Космос.mp3",
+      "artistName": "Mnogoznaal",
+      "songName": "Гостиница Космос",
+      "img": {
+        "url": "https://images.genius.com/b834342ff0f78e183f9452d8b59d8043.1000x1000x1.png",
+        "alt": "Какое-то описание"
+      },
+      "like": true,
+      "playing": true
+    },
+    {
+      "id": 2,
+      "url": "temp/Mnogoznaal - Гостиница Космос.mp3",
+      "artistName": "Лизочкина",
+      "songName": "Песня",
+      "img": {
+        "url": "https://img.freepik.com/free-photo/beautiful-kitten-with-colorful-clouds_23-2150752964.jpg",
+        "alt": "Какое-то описание"
+      },
+      "like": true,
+      "playing": false
+    }
+  ]
+}

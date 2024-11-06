@@ -1,18 +1,23 @@
 import React, { useEffect, useState } from "react";
 import "./ProfileButton.scss";
-import { user } from "../../../../data";
-
+import { json } from "stream/consumers";
 
 const ProfileButton: React.FC = () => {
+  interface User {
+    firstName: string;
+    surName: string
+  }
 
-  const[monogram, setMonogram] = useState('')
+  const[userData, setUserData] = useState<User | undefined>(undefined)
 
   useEffect(() => {
-    if (user.firstName) {
-      const firstLetter = user.firstName[0].toUpperCase()
-      setMonogram(firstLetter)
-    }
-  })
+    fetch("data/user.json")
+    .then((response) => response.json())
+    .then((data) => setUserData(data))
+    .catch((error) => console.log("Ошибка при загрузке данных", error))
+  }, [])
+
+  const monogram = userData?.firstName ? userData?.firstName[0].toUpperCase() : ''
 
   return (
     <div className="ProfileButton">

@@ -1,10 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./AudioPlayer.scss";
-import { trackData } from "../../../data";
-// import GeneralControls from "./GeneralControls/GeneralControls";
 import H5AudioPlayer from "react-h5-audio-player";
+import { data } from "@remix-run/router";
+import { error } from "console";
+
+interface Image {
+  url: string;
+  alt: string;
+}
+
+interface Track {
+  id: number;
+  url: string | undefined;
+  img: Image;
+  artistName: string | null;
+  songName: string | null;
+  like: boolean;
+  playing: boolean;
+}
 
 const AudioPlayer: React.FC = () => {
+  const [trackData, setTrackData] = useState<Track[]>([]);
+
+  useEffect(() => {
+    fetch("data/tracks.json")
+      .then((response) => response.json())
+      .then((data) => setTrackData(data.tracks))
+      .catch((error) => console.error("Ошибка при загрузке данных", error));
+  }, []);
+
   const CustomPrevIcon: React.FC = () => {
     return (
       <svg
@@ -61,19 +85,16 @@ const AudioPlayer: React.FC = () => {
     );
   };
 
-  const currentTrack = trackData.find((track) => track.playing);
-
   return (
     <div className="AudioPlayer">
       <H5AudioPlayer
-        src={currentTrack?.url}
+        src={trackData.find((track) => track.playing)?.url}
         customIcons={{
-          rewind: <CustomPrevIcon/>,
+          rewind: <CustomPrevIcon />,
           play: <CustomPlayIcon />,
-          forward: <CustomNextButton/>
+          forward: <CustomNextButton />,
         }}
       />
-      {/* <GeneralControls audioRef={audioRef} /> */}
     </div>
   );
 };

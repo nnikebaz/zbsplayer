@@ -8,7 +8,7 @@ import Tracks from "../tracks.tsx";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/zbsplayer/">
       <div className="Wrapper">
         <Routes>
           <Route

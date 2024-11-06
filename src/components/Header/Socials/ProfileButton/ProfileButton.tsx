@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./ProfileButton.scss";
-import { json } from "stream/consumers";
 
 const ProfileButton: React.FC = () => {
   interface User {

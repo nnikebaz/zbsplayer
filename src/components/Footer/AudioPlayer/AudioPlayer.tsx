@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./AudioPlayer.scss";
 import H5AudioPlayer from "react-h5-audio-player";
-import { data } from "@remix-run/router";
-import { error } from "console";
 
 interface Image {
   url: string;

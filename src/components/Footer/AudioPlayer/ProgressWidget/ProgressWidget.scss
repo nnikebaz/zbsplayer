@@ -1,0 +1,17 @@
+.ProgressWidget {
+  width: 100%;
+  display: flex;
+  
+  &__currentTime {
+    padding: .6rem;
+  }
+
+  &__seekBar {
+    width: 100%;
+  }
+
+  &__totalTime {
+    padding: .6rem;
+  }
+
+}

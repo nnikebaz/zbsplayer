@@ -1,5 +1,70 @@
+@import '../../../sass/abstracts/variables.scss';
+@import '../../../sass/abstracts/animations.scss';
+
+
+$rhap_background-color: unset !default;  // Задать красный цвет фона
+$rhap_theme-color: $color-light-gray-hover !default;       // Цвет кнопок и индикаторов
+$rhap_time-color: $color-light-gray !default;        // Цвет времени
+
+.rhap_container {
+  padding: 0px!important;
+}
+
+.rhap_progress-section {
+  order: 2;
+}
+
+.rhap_stacked .rhap_controls-section {
+  margin-top: 0px;
+}
+
 .AudioPlayer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  &__prevButton { 
+    width: 3.6rem;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    fill: $color-light-gray;    
+    @include scale-animation-on-button;
+    @include fill-animation-on-button;
+    cursor: pointer;
+  }
+
+  &__playButton {
+    width: 3.6rem;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    fill: white;
+    @include scale-animation-on-button;
+    cursor: pointer;
+  }
+
+  &__nextButton { 
+    width: 3.6rem;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    fill: $color-light-gray;    
+    @include scale-animation-on-button;
+    @include fill-animation-on-button;
+    cursor: pointer;
+  }
+
+
+  &__playPath {
+    visibility: visible;
+    &.hidden {
+      visibility: hidden;
+    }
+  }
+
+  &__pausePath {
+    visibility: visible;
+    &.hidden {
+      visibility: hidden;
+    }
+  }
 }
+
+@import "../../../../node_modules/react-h5-audio-player/src/styles.scss";

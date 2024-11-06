@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React from "react";
 import './FinderWidget.scss'
 import HomeButton from "./HomeButton/HomeButton";
 import FinderBulb from "./FinderBulb/FinderBulb";

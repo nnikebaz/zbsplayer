@@ -1,7 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect} from "react";
 import "./SliderButtons.scss";
-import leftButtonImg from "/public/button_left.svg";
-import rightButtonImg from "/public/button_right.svg";
 
 interface SliderButtonsProps {
   scrollRef: React.RefObject<HTMLDivElement | null>;

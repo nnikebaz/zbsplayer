@@ -1,4 +1,3 @@
-import React from "react";
 import './Queue.scss'
 import QueueHeader from "./QueueHeader/QueueHeader";
 import PlayingNow from "./PlayingNow/PlayingNow";

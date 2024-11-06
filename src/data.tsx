@@ -1,8 +1,9 @@
+// import { parseWebStream } from 'music-metadata';
+
 interface Image {
   url: string;
   alt: string;
 }
-
 
 interface Album {
   id: number;
@@ -163,7 +164,7 @@ export const trackData: Track[] = [
     id: 2,
     url: "server/uploads/Mnogoznaal - Гостиница Космос.mp3",
     artistName: "Лизочкина",
-    songName: "Писька",
+    songName: "Песня",
     img: {
       url: 'https://img.freepik.com/free-photo/beautiful-kitten-with-colorful-clouds_23-2150752964.jpg',
       alt: 'Какое-то описание',
@@ -172,3 +173,39 @@ export const trackData: Track[] = [
     playing: false,
   },
 ];
+
+
+// async function parsingMetaData (trackURL: RequestInfo | URL): Promise<string> {
+// try {
+// // Assuming you have a ReadableStream of an audio file
+// const response = await fetch(trackURL);
+// const webStream = response.body;
+
+//     // Parse the metadata from the web stream
+//     const metadata = await parseWebStream(webStream, 'audio/mpeg');
+
+//     // Log the parsed metadata
+//     console.log(metadata.common.artist);
+//     console.log(metadata.common.picture);
+//     if (metadata.common.artist) {
+//       return metadata.common.artist
+//     }
+// } catch (error: unknown) {
+//   if (error instanceof Error) {
+//     console.error('Error parsing metadata:', error.message);
+//   } else {
+//     console.log('An unknown error occurred')
+//   }
+// }
+// };
+
+// async function updateArtistName() {
+//   try {
+//     trackData[0].artistName = await parsingMetaData(trackData[0].url)
+//     console.log('Artist name updated: ', trackData[0].artistName)
+//   } catch (error) {
+//     console.error('Error updating artist name', error)
+//   }
+// }
+
+// updateArtistName()

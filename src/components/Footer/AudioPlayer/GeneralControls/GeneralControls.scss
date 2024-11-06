@@ -31,4 +31,19 @@
     @include fill-animation-on-button;
     cursor: pointer;
   }
+
+
+  &__playPath {
+    visibility: visible;
+    &.hidden {
+      visibility: hidden;
+    }
+  }
+
+  &__pausePath {
+    visibility: visible;
+    &.hidden {
+      visibility: hidden;
+    }
+  }
 }
